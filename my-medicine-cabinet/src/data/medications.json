@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "brand_name": "Eliquis",
+    "medication_description": "Apixaban (Eliquis) is an expensive drug used to lower the chance of stroke in people with a medical condition called atrial fibrillation. It is also used to treat or prevent clots in the lungs or in the veins.",
+    "pap_name": "Bristol Myers Squibb Patient Assistance Foundation",
+    "pap_info_link": "https://www.bmspaf.org/",
+    "pap_eligibility_link": "https://www.bmspaf.org/eligibility",
+    "pap_application_link": "https://www.bmspaf.org/static/media/BMSPAF-Enrollment-Form.66cbc25e.pdf"
+  },
+  {
+    "id": 2,
+    "brand_name": "Colchicine",
+    "medication_description": "Colcrys (colchicine) is used to treat joint pain and swelling due to attacks of gouty arthritis, and familial Mediterranean fever.",
+    "pap_name": "Takeda Help At Hand",
+    "pap_info_link": "https://www.helpathandpap.com/About.aspx",
+    "pap_eligibility_link": "https://www.helpathandpap.com/Eligibility.aspx?product=COLCRYS",
+    "pap_application_link": "https://www.helpathandpap.com/api/ProductFiles/hah_application.pdf"
+  }
+]

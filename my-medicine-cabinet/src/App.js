@@ -1,8 +1,14 @@
+import React from 'react';
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MedicationInfo from './components/MedicationLog';
+import MedicationLog from './components/MedicationLog';
+import medData from './data/medications.json';
 
 function App() {
+	// const [medications, setMedications] = useState(medData);
+	const medications = medData[0];
+
 	return (
 		<div id="App">
 			<header>
@@ -10,7 +16,7 @@ function App() {
 			</header>
 
 			<main>
-				<MedicationInfo></MedicationInfo>
+				<MedicationLog medications={medications}></MedicationLog>
 			</main>
 		</div>
 	);
