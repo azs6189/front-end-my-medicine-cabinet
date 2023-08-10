@@ -1,8 +1,40 @@
+// Presentational Component
 import React from 'react';
-import './MedicationLog.css'
+import './MedicationLog.css';
+import MedicationEntry from './MedicationEntry';
+import PropTypes from 'prop-types';
+import urlPropType from 'url-prop-type';
 
-const MedicationInfo = () => {
-	return <h2>Patient Assistance Program Info</h2>;
+const MedicationLog = (props) => {
+	const medication = props.medications;
+
+	return (
+		<div>
+			<MedicationEntry
+				id={medication.id}
+				brand_name={medication.brand_name}
+				medication_description={medication.medication_description}
+				pap_name={medication.pap_name}
+				pap_info_link={medication.pap_info_link}
+				pap_eligibility_link={medication.pap_eligibility_link}
+				pap_application_link={medication.pap_application_link}
+			></MedicationEntry>
+		</div>
+	);
 };
 
-export default MedicationInfo;
+MedicationLog.proTypes = {
+	medication: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.number,
+			brand_name: PropTypes.string,
+			medication_description: PropTypes.string,
+			pap_name: PropTypes.string,
+			pap_info_link: urlPropType.isRequired,
+			pap_eligibility_link: urlPropType.isRequired,
+			pap_application_link: urlPropType.isRequired,
+		})
+	),
+};
+
+export default MedicationLog;
