@@ -21,9 +21,9 @@ const MedicationNameInput = () => {
 				onChange={renameMedication}
 			/>
 
-			<input type="submit" value="Submit"></input>
-
-			<FontAwesomeIcon icon={faMagnifyingGlass} />
+			<button type="submit" value="Submit">
+				<FontAwesomeIcon icon={faMagnifyingGlass} />
+			</button>
 		</form>
 	);
 };
