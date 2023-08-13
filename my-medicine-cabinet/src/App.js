@@ -3,7 +3,7 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MedicationLog from './components/MedicationLog';
-import SearchBar from './components/SearchBar';
+import MedicationNameInput from './components/MedicationNameInput';
 import medData from './data/medications.json';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 			</header>
 
 			<main>
-				<SearchBar></SearchBar>
+				<MedicationNameInput></MedicationNameInput>
 				<MedicationLog medications={medications}></MedicationLog>
 			</main>
 		</div>
