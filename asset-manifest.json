@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/front-end-my-medicine-cabinet/static/css/main.160a33a2.css",
+    "main.js": "/front-end-my-medicine-cabinet/static/js/main.f1f5238d.js",
+    "static/js/787.3292914d.chunk.js": "/front-end-my-medicine-cabinet/static/js/787.3292914d.chunk.js",
+    "index.html": "/front-end-my-medicine-cabinet/index.html",
+    "main.160a33a2.css.map": "/front-end-my-medicine-cabinet/static/css/main.160a33a2.css.map",
+    "main.f1f5238d.js.map": "/front-end-my-medicine-cabinet/static/js/main.f1f5238d.js.map",
+    "787.3292914d.chunk.js.map": "/front-end-my-medicine-cabinet/static/js/787.3292914d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.160a33a2.css",
+    "static/js/main.f1f5238d.js"
+  ]
+}
