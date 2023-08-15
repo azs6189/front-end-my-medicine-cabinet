@@ -1,6 +1,24 @@
-/* * {
-  border: solid 2px red;
-} */
+html {
+  /* border: solid 2px red; */
+  margin: 45px;
+  /* padding: 10px; */
+  background-image: url('https://images.unsplash.com/photo-1610938920219-620e28bd1bae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');
+  background-size: cover;
+  /* background-position: right; */
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+}
+
+#App {
+  padding: 15px;
+  background-color: antiquewhite;
+}
+
+
 
 
 
