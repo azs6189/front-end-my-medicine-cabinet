@@ -2,28 +2,29 @@ import React from 'react';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import './MedicationNameInput.css';
 
-const MedicationNameInput = () => {
-	const [medicationName, setMedicationName] = useState('Eliquis');
+const MedicationNameInput = ({ onSearch }) => {
+	const [medicationName, setMedicationName] = useState('');
 
-	const renameMedication = (changeEvent) => {
-		console.log('Details about the element that fired the event:', changeEvent);
-		console.log('The value of that element:', changeEvent.target.value);
-		setMedicationName(changeEvent.target.value);
+	const handleSearch = () => {
+		onSearch(medicationName);
 	};
 
 	return (
-		<form className="form-group fg--search">
-			<input
-				type="text"
-				className="input"
-				value={medicationName}
-				onChange={renameMedication}
-			/>
+		<form className="centered-form">
+			<section>
+				<input
+					type="text"
+					className="input"
+					value={medicationName}
+					onChange={(event) => setMedicationName(event.target.value)}
+				/>
 
-			<button type="submit" value="Submit">
-				<FontAwesomeIcon icon={faMagnifyingGlass} />
-			</button>
+				<button type="button" onClick={handleSearch}>
+					<FontAwesomeIcon icon={faMagnifyingGlass} />
+				</button>
+			</section>
 		</form>
 	);
 };
