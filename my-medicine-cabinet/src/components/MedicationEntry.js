@@ -10,21 +10,53 @@ const MedicationEntry = (props) => {
 		<div>
 			<h2 className="pap-info__heading">Patient Assistance Program Info</h2>
 			<ul className="pap-info">
-				<li>Brand Name: {props.brand_name}</li>
-				<li>Description: {props.medication_description}</li>
-				<li>Program Name: {props.pap_name}</li>
 				<li>
-					Program Info Link:{' '}
-					<a href={props.pap_info_link}>{props.pap_info_link}</a>
+					<span style={{ fontWeight: 'bold' }}>Brand Name:</span>{' '}
+					{props.brand_name}
 				</li>
 				<li>
-					Program Eligibility Link:{' '}
-					<a href={props.pap_eligibility_link}>{props.pap_eligibility_link}</a>
+					<span style={{ fontWeight: 'bold' }}>Description:</span>{' '}
+					{props.medication_description}
 				</li>
 				<li>
-					Program Application Link:{' '}
-					<a href={props.pap_application_link}>{props.pap_application_link}</a>
+					<span style={{ fontWeight: 'bold' }}>Program Name:</span>{' '}
+					{props.pap_name}
 				</li>
+
+				{props.pap_info_link && (
+					<li>
+						Program Info Link:{' '}
+						<a href={props.pap_info_link} target="_blank" rel="noreferrer">
+							{props.pap_info_link}
+						</a>
+					</li>
+				)}
+
+				{props.pap_eligibility_link && (
+					<li>
+						Program Eligibility Link:{' '}
+						<a
+							href={props.pap_eligibility_link}
+							target="_blank"
+							rel="noreferrer"
+						>
+							{props.pap_eligibility_link}
+						</a>
+					</li>
+				)}
+
+				{props.pap_application_link && (
+					<li>
+						Program Application Link:{' '}
+						<a
+							href={props.pap_application_link}
+							target="_blank"
+							rel="noreferrer"
+						>
+							{props.pap_application_link}
+						</a>
+					</li>
+				)}
 			</ul>
 		</div>
 	);
