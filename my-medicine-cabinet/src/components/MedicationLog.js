@@ -6,25 +6,27 @@ import PropTypes from 'prop-types';
 import urlPropType from 'url-prop-type';
 
 const MedicationLog = (props) => {
-	const medication = props.medications;
+	const medications = props.medications;
 
 	return (
 		<div>
-			<MedicationEntry
-				id={medication.id}
-				brand_name={medication.brand_name}
-				medication_description={medication.medication_description}
-				pap_name={medication.pap_name}
-				pap_info_link={medication.pap_info_link}
-				pap_eligibility_link={medication.pap_eligibility_link}
-				pap_application_link={medication.pap_application_link}
-			></MedicationEntry>
+			{medications.map((medication) => (
+				<MedicationEntry
+					key={medication.id}
+					brand_name={medication.brand_name}
+					medication_description={medication.medication_description}
+					pap_name={medication.pap_name}
+					pap_info_link={medication.pap_info_link}
+					pap_eligibility_link={medication.pap_eligibility_link}
+					pap_application_link={medication.pap_application_link}
+				></MedicationEntry>
+			))}
 		</div>
 	);
 };
 
-MedicationLog.proTypes = {
-	medication: PropTypes.arrayOf(
+MedicationLog.propTypes = {
+	medications: PropTypes.arrayOf(
 		PropTypes.shape({
 			id: PropTypes.number,
 			brand_name: PropTypes.string,
